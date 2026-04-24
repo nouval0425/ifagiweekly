@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tambah Data</title>
+</head>
+<body>
+    <h2>Tambah Data Mahasiswa</h2>
+<!-- belajar form sifatnya itu inline, perlu adanya id dan name-->
+<form action="mahasiswa.html" method="post">
+    <table cellpadding="5px">
+ <tr>
+    <td><label for="nama">Nama</label></td>
+    <td>:</td>
+    <td><input type ="text" id="nama" name="nama" /></td>
+</tr>
+
+<tr>
+    <td><label for="NIM">NIM</label></td>
+    <td>:</td>
+    <td><input type ="number" id="NIM" name="NIM" /></td>
+ </tr>
+
+ 
+ <tr>
+     <td><label for="password">password</label></td>
+     <td>:</td>
+     <td><input type ="password" id="password" name="password" /></td>
+    </tr>
+    
+    <tr>
+       <td><label for="email">E-Mail</label></td>
+       <td>:</td>
+       <td><input type ="email" id="email" name="email" /></td>
+    </tr>
+
+ <tr>
+    <td><label for="hp">No HP</label></td>
+    <td>:</td>
+    <td><input type ="tel" id="hp" name="hp" /></td>
+ </tr>
+
+<tr>
+    <td><label for="website">Website</label></td>
+    <td>:</td>
+    <td><input type ="url" id="website" name="website" /></td>
+ </tr>
+
+<tr>
+    <td><label for="tgl">TGL lahir</label></td>
+    <td>:</td>
+    <td><input type ="date" id="tgl" name="tgl" /></td>
+ </tr>
+
+ <tr>
+    <td><label for="color">Fav color</label></td>
+    <td>:</td>
+    <td><input type ="color" id="color" name="color" /></td>
+ </tr>
+
+ <tr>
+    <td><label for="kepuasan">Tingkat Kepuasan</label></td>
+    <td>:</td>
+    <td><input type ="range" id="kepuasan" name="kepuasan" /></td>
+ </tr>
+
+ <tr>
+    <td><label for="kelamin">Jenis Kelamin</label></td>
+    <td>:</td>
+    <td><input type ="radio" id="pria" name="kelamin" />
+    <label for="pria">Pria</label>
+    <input type ="radio" id="Wanita" name="kelamin" />
+    <label for="Wanita">Wanita</label></td>
+ </tr>
+ 
+
+<tr>
+    <td><button type="submit" name="submit">Tambah</button></td>
+ </tr>
+</table>
+</form>
+</body>
+</html>
