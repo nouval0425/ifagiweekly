@@ -7,8 +7,19 @@
 </head>
 <body>
     <h2>Tambah Data Mahasiswa</h2>
+    <table border="1" cellspacing="0" cellpadding="10px">
+        <tr>
+            <td><a href="index.html">Home</a></td>
+            <td><a href="profile.html">Profile</a></td>
+            <td><a href="contact.html">Contact</a></td>
+            <td><a href="mahasiswa.html">Data Mahasiswa</a></td>
+        </tr>
+    </table>
+    <br>
+    <hr/>
+
 <!-- belajar form sifatnya itu inline, perlu adanya id dan name-->
-<form action="mahasiswa.html" method="post">
+<form action="#" method="post">
     <table cellpadding="5px">
  <tr>
     <td><label for="nama">Nama</label></td>
@@ -62,7 +73,7 @@
  <tr>
     <td><label for="kepuasan">Tingkat Kepuasan</label></td>
     <td>:</td>
-    <td><input type ="range" id="kepuasan" name="kepuasan" /></td>
+    <td><input type ="range" id="kepuasan" name="kepuasan" min="0" max="100" /></td>
  </tr>
 
  <tr>
@@ -73,11 +84,45 @@
     <input type ="radio" id="Wanita" name="kelamin" />
     <label for="Wanita">Wanita</label></td>
  </tr>
+
+ <tr>
+    <td><label for="hoby">HOBIES</label></td>
+    <td>:</td>
+    <td><input type ="checkbox" id="buku" name="hoby" />
+   <label for="buku">baca buku</label>
+   <input type="checkbox" id="nonton">
+   <label for="nonton">nonton film</label>
+   <input type="checkbox" id="maen game">
+   <label for="maen game">maen game</label>
+   </td>
+ </tr>
+
+ <tr>
+    <td><label for="foto">Upload photo</label></td>
+    <td>:</td>
+    <td><input type ="file" id="foto" name="foto" /></td>
+ </tr>
+
+ <tr>
+    <td><label for="alamat">Alamat</label></td>
+    <td>:</td>
+    <td><input type ="textarea" id="alamat" name="alamat"/></td>
+ </tr>
+
+ <tr>
+    <td><label for="jurusan">Jurusan</label></td>
+    <td>:</td>
+    <td><select id="jurusan" name="jurusan">
+    <option>Informatika</option>
+    <option>Sistem Informasi</option>
+    <option>Teknik Komputer</option></td>
+ </tr>
  
 
 <tr>
     <td><button type="submit" name="submit">Tambah</button></td>
  </tr>
+
 </table>
 </form>
 </body>
