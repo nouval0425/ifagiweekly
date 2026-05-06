@@ -50,6 +50,24 @@ a:visited{
     text-decoration: none;
 }
 
+#kotak{
+   display: flex;
+   padding: 5px;
+   gap: 160px;
+}
 #prestasi{
-   
+    margin-left: 20px;
+    align-items: center;
+    background-color: pink;
+    width: 450px;
+    padding: 2px;
+      box-shadow: 5px 5px 10px black;
+}
+
+#jabatan{
+    align-items: center;
+    background-color: pink;
+    width: 450px;
+    padding: 2px;
+    box-shadow: 5px 5px 10px black;
 }
