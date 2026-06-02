@@ -6,7 +6,7 @@
     <title>
         INFORMATIKA 2026
     </title>
-    <link rel="stylesheet" href="/assets/css/style_index.css">
+    <link rel="stylesheet" href="assets/css/style_index.css">
 </head>
 <body>
 
@@ -16,10 +16,10 @@
     <h1>INFROMATIKA 2026</h1>
     <table  cellspacing="0" cellpadding="10px"  >
         <tr>
-            <td><a href="index.html">Home</a></td>
-            <td><a href="profile.html">Profile</a></td>
-            <td><a href="contact.html">Contact</a></td>
-            <td><a href="mahasiswa.html">Data Mahasiswa</a></td>
+            <td><a href="index.php">Home</a></td>
+            <td><a href="profile.php">Profile</a></td>
+            <td><a href="contact.php">Contact</a></td>
+            <td><a href="mahasiswa.php">Data Mahasiswa</a></td>
         </tr>
     </table>
  </div>
@@ -43,8 +43,8 @@
         id. Sed quis distinctio soluta?
     </p>
 
-    <a href="profile.html" >profile</a><br>
-    <a href="contact.html">contact</a><br>
+    <a href="profile.php" >profile</a><br>
+    <a href="contact.php">contact</a><br>
     <a href="https://youtube.com" target="_blank">Youtube</a>
 </div>
 
