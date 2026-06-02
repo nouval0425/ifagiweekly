@@ -26,42 +26,28 @@
     
     <table border="1" cellspacing="0" cellpadding="10px">
         <tr>
-            <th rowspan="2">No</th>
-            <th rowspan="2">nama</th>
-            <th rowspan="2">photo</th>
-            <th colspan="3">Nilai</th>
+            <th>No</th>
+            <th>nama</th>
+             <th>NIM</th>
+            <th>Jurusan</th>
+             <th>Email</th>
+            <th>No. HP</th>
+            <th>foto</th>
+            <th>aksi</th>
            
-        </tr>
-
-        <tr>
-            <th>UTS</th>
-            <th>UAS</th>
-            <th>TUGAS</th>
         </tr>
         <tr>
             <td>0</td>
             <td>wahyuddin</td>
-            <td><img src="assets/images/horse.jpg" alt="photo" width="80px"></td>
-            <td>50</td>
-            <td>90</td>
-            <td>100</td>
+            <td>13182420050</td>
+            <td>Informatika</td>
+            <td>ghifarynopal@gmail.com</td>
+            <td>085175104116</td>
+            <td><img src="assets/images/suzy.jpg" width ="80px" alt=""></td>
+            <td><a href="editdata.php"><button>Edit</button></a>
+            <a href="deletedata.php"><button>Delete</button></a></td>
         </tr>
-        <tr>
-            <td>1</td>
-            <td>Suzy</td>
-            <td><img src="assets/images/suzy.jpg" alt="photo" width="80px"></td>
-            <td>100</td>
-            <td>90</td>
-            <td>100</td>
-        </tr>
-        <tr>
-            <td>2</td>
-            <td>Nurdin</td>
-            <td><img src="assets/images/Te-gl_0025.jpg" alt="photo" width="80px"></td>
-            <td>70</td>
-            <td>88</td>
-            <td>60</td>
-        </tr>
+    
     </table>
     <br><br>
 
