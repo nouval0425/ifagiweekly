@@ -1,3 +1,33 @@
+<?php
+
+   require "fungsi.php";
+   $qmahasiswa = "SELECT * FROM mahasiswa";
+   $mahasiswas = tampildata($qmahasiswa);
+
+   
+   
+
+//    if($koneksi){
+//     echo "koneksi berhasil";
+//    };
+
+    // $query = "SELECT * FROM mahasiswa";
+    // $result = mysqli_query($koneksi, $query);
+
+    //ambil data (fetch ) dari lemari
+    //mysqli_fetch_row
+    //mysqli_fetch_assoc
+    //mysqli_fetch_object
+    //mysqli_fetch_array
+
+    //mysqli_fetch_row
+//    while($mhs = mysqli_fetch_row($result)) 
+//     {
+//     var_dump($mhs);
+//     }
+    
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -36,19 +66,28 @@
             <th>aksi</th>
            
         </tr>
+    <?php
+        $i =1;
+        foreach($mahasiswas as $mhs)
+    {
+    ?>
         <tr>
-            <td>0</td>
-            <td>wahyuddin</td>
-            <td>13182420050</td>
-            <td>Informatika</td>
-            <td>ghifarynopal@gmail.com</td>
-            <td>085175104116</td>
-            <td><img src="assets/images/suzy.jpg" width ="80px" alt=""></td>
+            <td><?= $i?></td>
+            <td><?php echo $mhs["nama"]?></td>
+            <td><?= $mhs["nim"]?></td>
+            <td><?= $mhs["jurusan"]?></td>
+            <td><?= $mhs["email"]?></td>
+            <td><?= $mhs["no_hp"]?></td>
+            <td><img src="assets/images/<?= $mhs["foto"]?>" width ="80px" alt=""></td>
             <td><a href="editdata.php"><button>Edit</button></a>
             <a href="deletedata.php"><button>Delete</button></a></td>
         </tr>
-    
+<?php
+$i++;
+    }
+?>
     </table>
+
     <br><br>
 
     <table border="1" cellspacing="0" cellpadding="10px"> 
