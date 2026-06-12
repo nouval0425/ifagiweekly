@@ -79,8 +79,9 @@
             <td><?= $mhs["email"]?></td>
             <td><?= $mhs["no_hp"]?></td>
             <td><img src="assets/images/<?= $mhs["foto"]?>" width ="80px" alt=""></td>
-            <td><a href="editdata.php"><button>Edit</button></a>
-            <a href="deletedata.php"><button>Delete</button></a></td>
+            <td>
+            <a href="editdata.php"><button>Edit</button></a>
+            <a href="deletedata.php?id=<?= $mhs["id"] ?>" onClick ="return confirm('yaqiinnn?')"; ><button>Delete</button></a></td>
         </tr>
 <?php
 $i++;

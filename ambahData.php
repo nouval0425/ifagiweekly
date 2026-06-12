@@ -1,3 +1,42 @@
+<?php
+require "fungsi.php";
+
+if(isset($_POST["submit"]))
+{
+      $nama = $_POST["nama"];
+    $nim = $_POST["nim"];
+    $jurusan = $_POST["jurusan"];
+    $email = $_POST["email"];
+    $nohp = $_POST["no_hp"];
+    $foto = $_POST["foto"];
+   
+
+    $query = "INSERT INTO mahasiswa
+    (nama,nim,jurusan,email,no_hp,foto)
+    VALUES
+    ('$nama','$nim','$jurusan','$email','$nohp','$foto')";
+
+
+   mysqli_query($koneksi,$query);
+
+    if(mysqli_affected_rows($koneksi) > 0)
+      {
+        echo "<script>
+               alert('data berhasil ditambahkan');
+               window.location.href='mahasiswa.php';
+               </script>
+               ";
+    }else{
+        echo "<script>
+                alert('Data gagal ditambahkan!');
+                window.location.href ='mahasiswa.php'      
+               </script>
+               ";
+    }
+}
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -19,109 +58,70 @@
     <hr/>
 
 <!-- belajar form sifatnya itu inline, perlu adanya id dan name-->
-<form action="#" method="post">
-    <table cellpadding="5px">
- <tr>
-    <td><label for="nama">Nama</label></td>
+<form action="" method="POST" enctype="multipart/form-data">
+
+<table cellpadding="5">
+
+<tr>
+    <td>Nama</td>
     <td>:</td>
-    <td><input type ="text" id="nama" name="nama" /></td>
+    <td>
+        <input type="text" name="nama" required>
+    </td>
 </tr>
 
 <tr>
-    <td><label for="NIM">NIM</label></td>
+    <td>NIM</td>
     <td>:</td>
-    <td><input type ="number" id="NIM" name="NIM" /></td>
- </tr>
+    <td>
+        <input type="number" name="nim" required>
+    </td>
+</tr>
 
+<tr>
+    <td>Email</td>
+    <td>:</td>
+    <td>
+        <input type="email" name="email" required>
+    </td>
+</tr>
+
+<tr>
+    <td>No HP</td>
+    <td>:</td>
+    <td>
+        <input type="tel" name="no_hp" required>
+    </td>
+</tr>
+
+<tr>
+    <td>Jurusan</td>
+    <td>:</td>
+    <td>
+        <input type="text" name ="jurusan" required>
+    </td>
+</tr>
+
+<tr>
+    <td>Foto</td>
+    <td>:</td>
+    <td>
+        <input type="text" name="foto" required>
+    </td>
+</tr>
+
+<tr>
+    <td colspan="3">
+        <button type="submit" name="submit">
+            Tambah Data
+        </button>
+    </td>
+</tr>
+
+</table>
+
+</form>
  
- <tr>
-     <td><label for="password">password</label></td>
-     <td>:</td>
-     <td><input type ="password" id="password" name="password" /></td>
-    </tr>
-    
-    <tr>
-       <td><label for="email">E-Mail</label></td>
-       <td>:</td>
-       <td><input type ="email" id="email" name="email" /></td>
-    </tr>
-
- <tr>
-    <td><label for="hp">No HP</label></td>
-    <td>:</td>
-    <td><input type ="tel" id="hp" name="hp" /></td>
- </tr>
-
-<tr>
-    <td><label for="website">Website</label></td>
-    <td>:</td>
-    <td><input type ="url" id="website" name="website" /></td>
- </tr>
-
-<tr>
-    <td><label for="tgl">TGL lahir</label></td>
-    <td>:</td>
-    <td><input type ="date" id="tgl" name="tgl" /></td>
- </tr>
-
- <tr>
-    <td><label for="color">Fav color</label></td>
-    <td>:</td>
-    <td><input type ="color" id="color" name="color" /></td>
- </tr>
-
- <tr>
-    <td><label for="kepuasan">Tingkat Kepuasan</label></td>
-    <td>:</td>
-    <td><input type ="range" id="kepuasan" name="kepuasan" min="0" max="100" /></td>
- </tr>
-
- <tr>
-    <td><label for="kelamin">Jenis Kelamin</label></td>
-    <td>:</td>
-    <td><input type ="radio" id="pria" name="kelamin" />
-    <label for="pria">Pria</label>
-    <input type ="radio" id="Wanita" name="kelamin" />
-    <label for="Wanita">Wanita</label></td>
- </tr>
-
- <tr>
-    <td><label for="hoby">HOBIES</label></td>
-    <td>:</td>
-    <td><input type ="checkbox" id="buku" name="hoby" />
-   <label for="buku">baca buku</label>
-   <input type="checkbox" id="nonton">
-   <label for="nonton">nonton film</label>
-   <input type="checkbox" id="maen game">
-   <label for="maen game">maen game</label>
-   </td>
- </tr>
-
- <tr>
-    <td><label for="foto">Upload photo</label></td>
-    <td>:</td>
-    <td><input type ="file" id="foto" name="foto" /></td>
- </tr>
-
- <tr>
-    <td><label for="alamat">Alamat</label></td>
-    <td>:</td>
-    <td><input type ="textarea" id="alamat" name="alamat"/></td>
- </tr>
-
- <tr>
-    <td><label for="jurusan">Jurusan</label></td>
-    <td>:</td>
-    <td><select id="jurusan" name="jurusan">
-    <option>Informatika</option>
-    <option>Sistem Informasi</option>
-    <option>Teknik Komputer</option></td>
- </tr>
- 
-
-<tr>
-    <td><button type="submit" name="submit">Tambah</button></td>
- </tr>
 
 </table>
 </form>
