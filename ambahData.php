@@ -3,7 +3,7 @@ require "fungsi.php";
 
 if(isset($_POST["submit"]))
 {
-      $nama = $_POST["nama"];
+   $nama = $_POST["nama"];
     $nim = $_POST["nim"];
     $jurusan = $_POST["jurusan"];
     $email = $_POST["email"];
@@ -52,6 +52,7 @@ if(isset($_POST["submit"]))
             <td><a href="profile.php">Profile</a></td>
             <td><a href="contact.php">Contact</a></td>
             <td><a href="mahasiswa.php">Data Mahasiswa</a></td>
+             <td><a href="register.php">Register</a></td>
         </tr>
     </table>
     <br>
